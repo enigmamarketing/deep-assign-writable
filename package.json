@@ -1,13 +1,11 @@
 {
-  "name": "deep-assign",
-  "version": "2.0.0",
-  "description": "Recursive Object.assign()",
+  "name": "deep-assign-writable",
+  "version": "1.0.0",
+  "description": "Recursive Object.assign(), but won't assign read-only properties.",
   "license": "MIT",
-  "repository": "sindresorhus/deep-assign",
-  "author": {
-    "name": "Sindre Sorhus",
-    "email": "sindresorhus@gmail.com",
-    "url": "sindresorhus.com"
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/enigmamarketing/deep-assign-writable.git"
   },
   "engines": {
     "node": ">=0.10.0"
@@ -34,7 +32,9 @@
     "keys",
     "values",
     "prop",
-    "properties"
+    "properties",
+    "writable",
+    "readonly"
   ],
   "dependencies": {
     "is-obj": "^1.0.0"
@@ -42,5 +42,6 @@
   "devDependencies": {
     "ava": "*",
     "xo": "*"
-  }
+  },
+  "author": "Steffan Donal <steffan@sdonalcreative.uk> (https://sdonalcreative.uk/)"
 }
