@@ -20,6 +20,10 @@ function assignKey(to, from, key) {
 	}
 
 	if (hasOwnProperty.call(to, key)) {
+		if (!Object.getOwnPropertyDescriptor(to, key).writable) {
+			return;
+		}
+
 		if (to[key] === undefined || to[key] === null) {
 			throw new TypeError('Cannot convert undefined or null to object (' + key + ')');
 		}
